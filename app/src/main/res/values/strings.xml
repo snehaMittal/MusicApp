@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">MusicApp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_add_favourite">Add to Favourites</string>
+    <string name="action_play_next">Play Next</string>
+    <string name="backdrop_title">LOVE MUSICS</string>
+    <string name="backdrop_subtitle">This season top 20 music</string>
+
+    <style name="TextViewAppearance.Headline2" parent="@style/TextViewAppearance">
+        <item name="typeface">robotoLight</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/global_color_primary_light</item>
+    </style>
+
+    <style name="TextViewAppearance" parent="@android:style/TextAppearance.Widget.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="typeface">robotoRegular</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:paddingLeft">26dp</item>
+        <item name="android:paddingRight">26dp</item>
+        <!-- Supports API Level 17+ -->
+        <!-- <item name="android:paddingStart">26dp</item> -->
+        <!-- Supports API Level 17+ -->
+        <!-- <item name="android:paddingEnd">26dp</item> -->
+    </style>
+</resources>
