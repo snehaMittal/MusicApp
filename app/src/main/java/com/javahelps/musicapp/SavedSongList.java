@@ -53,7 +53,7 @@ public class SavedSongList extends AppCompatActivity implements View.OnClickList
             if (isPlaying1 == false && isPlaying2 == false){
                 bt2.setBackgroundResource(R.drawable.pause);
                 isPlaying2 = true ;
-                mySong2 = MediaPlayer.create(this , R.raw.permanent_stain);
+                mySong2 = MediaPlayer.create(this , R.raw.american_idiot);
                 mySong2.start();
             }
             else if (isPlaying2 == false && isPlaying1 == true){
@@ -62,7 +62,7 @@ public class SavedSongList extends AppCompatActivity implements View.OnClickList
                 bt1.setBackgroundResource(R.drawable.play);
                 isPlaying1 = false;
                 isPlaying2 = true ;
-                mySong2 = MediaPlayer.create(this , R.raw.permanent_stain);
+                mySong2 = MediaPlayer.create(this , R.raw.american_idiot);
                 mySong2.start();
             }
             else if (isPlaying2 == true && isPlaying1 == false){

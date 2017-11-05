@@ -36,9 +36,10 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         }
     }
 
-    public AlbumAdapter(Context mContext, List<Album> albumList) {
+    public AlbumAdapter(Context mContext, List<Album> albumList , Onclicklistener onclicklistener) {
         this.mContext = mContext;
         this.albumList = albumList;
+        this.onclicklistener = onclicklistener ;
     }
     //
 //    public AlbumAdapter(Context mContext, List<Album> albumList ) {

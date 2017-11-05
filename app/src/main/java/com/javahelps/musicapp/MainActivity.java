@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                         else {
                             progressBar.dismiss();
-                            Toast.makeText(MainActivity.this,"Could not register ..Please try again" , Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Username or password is incorrect" , Toast.LENGTH_SHORT).show();
 
                         }
 

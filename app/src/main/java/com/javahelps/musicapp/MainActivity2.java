@@ -32,10 +32,10 @@ public class MainActivity2 extends AppCompatActivity
     private ArrayList<String> mDataSet ;
     private AlbumAdapter adapter ;
     private List<Album> albumsList ;
-    private String image[] = {"https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fc.saavncdn.com%2F423%2FPelican-English-2015-500x500.jpg&imgrefurl=https%3A%2F%2Fwww.saavn.com%2Fs%2Falbum%2Fenglish%2FPelican-2015%2Fd0f44PC9HH4_&docid=AB8MRUU7NYN94M&tbnid=UYwZOfr98xdAXM%3A&vet=10ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgpKAMwAw..i&w=500&h=500&bih=637&biw=1366&q=songs%20poster%20english&ved=0ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgpKAMwAw&iact=mrc&uact=8",
-            "https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2F9eFPBrw0RPE%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9eFPBrw0RPE&docid=9lpD3b_pEYUa6M&tbnid=B-RQwgVLRAQXaM%3A&vet=10ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgxKAswCw..i&w=1280&h=720&bih=637&biw=1366&q=songs%20poster%20english&ved=0ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgxKAswCw&iact=mrc&uact=8",
-            "https://www.google.co.in/imgres?imgurl=https%3A%2F%2Fqph.ec.quoracdn.net%2Fmain-qimg-6f66e0f040c4e9ec8af4398fbfff8056-c&imgrefurl=https%3A%2F%2Fwww.quora.com%2FWhat-are-some-popular-English-songs-that-a-Hindi-bollywood-song-fanatic-would-love&docid=IwVzQmqLqlKRnM&tbnid=cWNRp316LcZxeM%3A&vet=10ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgoKAIwAg..i&w=602&h=602&bih=637&biw=1366&q=songs%20poster%20english&ved=0ahUKEwiZ3_HR2-vWAhWCUxoKHQGqCBIQMwgoKAIwAg&iact=mrc&uact=8",
-            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwi_teWT3OvWAhXGq48KHa42BgYQjRwIBw&url=http%3A%2F%2Ffreehindimusiconline.blogspot.com%2F2009%2F09%2Fvengaboys-greatest-hits-2009-english.html&psig=AOvVaw1zdtuN4UtoNw2OZNS9sqQP&ust=1507919398920263"
+    private String image[] = {"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
+            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
+            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
+            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074"
     };
 
     ViewPager viewPager ;
@@ -70,7 +70,13 @@ public class MainActivity2 extends AppCompatActivity
         }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         albumsList = new ArrayList<>();
-        adapter = new AlbumAdapter(this, albumsList );
+        adapter = new AlbumAdapter(this, albumsList, new AlbumAdapter.Onclicklistener() {
+            @Override
+            public void newActivity(int position, View v) {
+                Intent intent = new Intent(MainActivity2.this , SavedSongList.class);
+                startActivity(intent);
+            }
+        });
         setSupportActionBar(toolbar);
 
 
@@ -82,6 +88,7 @@ public class MainActivity2 extends AppCompatActivity
 
         mRecylerView2.addItemDecoration(new GridSpacingItemDecoration(2, true));
         mRecylerView2.setAdapter(adapter);
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
