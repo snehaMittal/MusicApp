@@ -70,14 +70,10 @@ public class MainActivity2 extends AppCompatActivity
         }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         albumsList = new ArrayList<>();
-        adapter = new AlbumAdapter(this, albumsList, new AlbumAdapter.Onclicklistener() {
-            @Override
-            public void newActivity(int position, View v) {
-                Intent intent = new Intent(MainActivity2.this , SongList.class);
-                startActivity(intent);
-            }
-        });
+        adapter = new AlbumAdapter(this, albumsList );
         setSupportActionBar(toolbar);
+
+
 
         prepareAlbums();
         mRecylerView2 = (RecyclerView)findViewById(R.id.recylerview2);
@@ -143,6 +139,7 @@ public class MainActivity2 extends AppCompatActivity
 
         Album a = new Album("Maroon5", 13, covers[0]);
         albumsList.add(a);
+
 
         a = new Album("Sugar Ray", 8, covers[1]);
         albumsList.add(a);
