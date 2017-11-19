@@ -32,11 +32,10 @@ public class MainActivity2 extends AppCompatActivity
     private ArrayList<String> mDataSet ;
     private AlbumAdapter adapter ;
     private List<Album> albumsList ;
-    private String image[] = {"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
-            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
-            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074",
-            "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjPmt-s8qfXAhVBQI8KHaewB5gQjRwIBw&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3Danc7BiMTRXk&psig=AOvVaw27j9BzypvNacyswHdKOqVY&ust=1509987057139074"
-    };
+    private String image[] = {"https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjP2Pq6o8vXAhXKP48KHY08DfsQjRwIBw&url=https%3A%2F%2Fwww.allposters.com%2F&psig=AOvVaw0PEShbC2TlQ0ARaPb_bX0n&ust=1511202814147065",
+    "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjP2Pq6o8vXAhXKP48KHY08DfsQjRwIBw&url=https%3A%2F%2Fwww.allposters.com%2F&psig=AOvVaw0PEShbC2TlQ0ARaPb_bX0n&ust=1511202814147065" ,
+    "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjP2Pq6o8vXAhXKP48KHY08DfsQjRwIBw&url=https%3A%2F%2Fwww.allposters.com%2F&psig=AOvVaw0PEShbC2TlQ0ARaPb_bX0n&ust=1511202814147065" ,
+    "https://www.google.co.in/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&cad=rja&uact=8&ved=0ahUKEwjP2Pq6o8vXAhXKP48KHY08DfsQjRwIBw&url=https%3A%2F%2Fwww.allposters.com%2F&psig=AOvVaw0PEShbC2TlQ0ARaPb_bX0n&ust=1511202814147065"};
 
     ViewPager viewPager ;
     ViewPagerAdapter viewPagerAdapter;
@@ -139,8 +138,8 @@ public class MainActivity2 extends AppCompatActivity
 
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.album1,
-                R.drawable.album2,
+                R.drawable.album3,
+                R.drawable.album4,
                 R.drawable.album3,
                 R.drawable.album4};
 

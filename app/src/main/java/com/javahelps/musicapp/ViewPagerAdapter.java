@@ -54,7 +54,7 @@ public class ViewPagerAdapter extends PagerAdapter{
         try {
             Picasso.with(activity.getApplicationContext())
                     .load(images[position])
-                    .placeholder(R.drawable.album2)
+                    .placeholder(R.drawable.album1)
                     .error(R.drawable.album1)
                     .into(imageView);
         }
